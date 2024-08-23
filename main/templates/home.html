@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Home - EpiFlare{% endblock %}
+
+{% block content %}
+<section id="hero">
+    <div class="hero-content">
+        <h1>Stay Ahead of Disasters with EpiFlare</h1>
+        <p>We assist with accurate forecasts for natural disaster management</p>
+    </div>
+</section>
+
+<section id="predictions">
+    <h2>Natural Disaster Predictions</h2>
+    <div class="prediction-cards">
+
+        <!-- Earthquake Prediction Card -->
+        <div class="card">
+            <h3>Earthquake</h3>
+            <a href="http://localhost:8501/" class="btn">Earthquake Prediction</a>
+            <video loop muted autoplay>
+                <source src="{{ url_for('static', filename='earthquake.mp4') }}" type="video/mp4">
+            </video>
+            <p>
+                Our cutting-edge seismic activity monitoring system detects even the smallest tremors, providing early warnings that can save lives.
+                We use advanced algorithms and a vast network of sensors to predict the likelihood of significant seismic events with unprecedented accuracy.
+                Stay informed with our real-time updates and safeguard your community against potential disasters.
+            </p>
+        </div>
+
+        <!-- Forest Fire Prediction Card -->
+        <div class="card">
+            <h3>Forest Fire</h3>
+            <a href="http://127.0.0.1:5001/" class="btn">Forest Fire Predictions</a>
+            <video loop muted autoplay>
+                <source src="{{ url_for('static', filename='forest_fire.mp4') }}" type="video/mp4">
+            </video>
+            <p>
+                Using satellite imagery and real-time weather data, we predict forest fire outbreaks, helping authorities take preventive measures.
+                Our system identifies high-risk areas by analyzing vegetation dryness, wind patterns, and historical fire data.
+                Early detection and timely warnings can prevent the spread of wildfires and minimize environmental and economic damage.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About EpiFlare</h2>
+        <p>EpiFlare is dedicated to providing timely and accurate predictions for natural disasters...</p>
+    </div>
+</section>
+
+
+
+{% endblock %}

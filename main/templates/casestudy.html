@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Case Studies - AlertSphere{% endblock %}
+
+{% block content %}
+<section id="case-studies">
+    <div class="container">
+        <h2>Case Studies for Different Disasters</h2>
+
+        <div class="case-study">
+            <h3>Case Study: 2011 Tōhoku Earthquake</h3>
+            <img src="{{ url_for('static', filename='tohoku-earthquake.jpg') }}" alt="Tōhoku Earthquake" class="case-study-img">
+            <p>The 2011 Tōhoku earthquake was a devastating natural disaster that struck Japan on March 11, 2011. This case study examines the impacts of the earthquake and tsunami, the response strategies employed, and the lessons learned for future disaster preparedness and response.</p>
+            <a href="{{ url_for('static', filename='tohoku.pdf') }}" class="btn" target="_blank">Read Full Case Study</a>
+        </div>
+
+        <div class="case-study">
+            <h3>Case Study: 2010 Pakistan Floods</h3>
+            <img src="{{ url_for('static', filename='pakistan-floods.jpg') }}" alt="Pakistan Floods" class="case-study-img">
+            <p>The 2010 Pakistan floods were caused by heavy monsoon rains, which resulted in one of the most severe natural disasters in recent history. This case study explores the scale of the flooding, the humanitarian response, and the long-term recovery efforts in the affected areas.</p>
+            <a href="{{ url_for('static', filename='pakistan.pdf') }}" class="btn" target="_blank">Read Full Case Study</a>
+        </div>
+
+        <div class="case-study">
+            <h3>Case Study: 2019-2020 Australian Bushfires</h3>
+            <img src="{{ url_for('static', filename='australian-bushfires.jpg') }}" alt="Australian Bushfires" class="case-study-img">
+            <p>The Australian bushfires of 2019-2020, known as "Black Summer," were a series of devastating fires across Australia. This case study reviews the causes, impact on wildlife and communities, and the national and international response to the crisis.</p>
+            <a href="{{ url_for('static', filename='australian.pdf') }}" class="btn" target="_blank">Read Full Case Study</a>
+        </div>
+
+        <div class="case-study">
+            <h3>Case Study: 2020 Central America Hurricane Season</h3>
+            <img src="{{ url_for('static', filename='central-america-hurricanes.jpg') }}" alt="Central America Hurricanes" class="case-study-img">
+            <p>The 2020 hurricane season was unusually active, with multiple hurricanes affecting Central America. This case study discusses the impact of these storms, including damage, displacement, and the regional efforts to manage and recover from the storms.</p>
+            <a href="{{ url_for('static', filename='centralamerica.pdf') }}" class="btn" target="_blank">Read Full Case Study</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

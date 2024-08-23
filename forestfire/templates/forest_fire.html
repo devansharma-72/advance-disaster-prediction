@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forest Fire Prevention</title>
+
+  <!-- Custom CSS -->
+  <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="http://127.0.0.1:5000">EpiFlare</a>
+      <div class="nav-buttons">
+        <a class="nav-button" href="http://127.0.0.1:5000">Home</a>
+        <!-- <a class="nav-button" href="http://127.0.0.1:5000/guidelines">Guidelines</a> -->
+        <!-- <a class="nav-button" href="http://127.0.0.1:5000/casestudy">Case Study</a> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="header-section">
+    <h1 class="text-warning">Forest Fire Prevention</h1>
+    <p>Predict the probability of Forest-Fire Occurrence</p>
+  </header>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="container">
+      <form id="prediction-form" method="POST" action="/predict">
+        <div class="form-group">
+          <label for="temperature"><b>Temperature</b></label>
+          <input type="text" id="temperature" name="Temperature" placeholder="Temperature in Celsius">
+        </div>
+        <div class="form-group">
+          <label for="oxygen"><b>Oxygen</b></label>
+          <input type="text" id="oxygen" name="Oxygen" placeholder="Oxygen content in ppm">
+        </div>
+        <div class="form-group">
+          <label for="humidity"><b>Humidity</b></label>
+          <input type="text" id="humidity" name="Humidity" placeholder="Humidity %">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn-change">Predict Probability</button>
+        </div>
+      </form>
+      
+      {% if request.args.get('pred') %}
+      <div id="result" class="result-section">
+        <h4>Prediction Result</h4>
+        <p>{{ request.args.get('pred') }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Custom Styles in external style.css file -->
+</body>
+
+</html>

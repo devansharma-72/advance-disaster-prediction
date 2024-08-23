@@ -1,0 +1,7 @@
+streamlit
+scikit-learn
+xgboost
+pydeck
+geopy
+requests
+twilio

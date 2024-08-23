@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ case_study.title }}{% endblock %}
+
+{% block content %}
+<section id="case-study-detail">
+    <div class="container">
+        <h2>{{ case_study.title }}</h2>
+        <p>{{ case_study.content }}</p>
+    </div>
+</section>
+{% endblock %}
